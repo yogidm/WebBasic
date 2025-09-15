@@ -407,27 +407,29 @@ JavaScript memungkinkan halaman menjadi interaktif.
 > - Formulir sederhana dengan fitur (input text nama-NIM, checkbox gender, tombol submit)  
 > - Multimedia (gambar + video)  pendukung artikel
 > - JavaScript sederhana untuk mengubah background dan teks tombol (bisa menggunakan format warna Hexa) seperti:
-
-- `#FF0000` = Merah penuh  
-- `#00FF00` = Hijau penuh  
-- `#0000FF` = Biru penuh  
-- `#000000` = Hitam  
-- `#FFFFFF` = Putih  
-- `#808080` = Abu-abu  
-- `#FFFF00` = Kuning  
-- `#FFA500` = Oranye  
-- `#800080` = Ungu  
-- `#00FFFF` = Cyan / Aqua  
-- `#FFC0CB` = Pink  
-- `#A52A2A` = Cokelat  
-- `#008000` = Hijau tua  
-- `#ADD8E6` = Biru muda (*Sky Blue*)  
-- `#32CD32` = Lime hijau terang
-- `#FFD700` = Emas (*Gold*)  
-- `#C0C0C0` = Perak (*Silver*)  
-- `#F5F5DC` = Beige  
-- `#FA8072` = Salmon  
-- `#2F4F4F` = Abu tua (*Dark Slate Gray*)
+> 
+> | Preview | Hex Code | Nama / Keterangan        |
+> |---------|----------|--------------------------|
+> | 🟥 | `#FF0000` | Merah penuh             |
+> | 🟩 | `#00FF00` | Hijau penuh             |
+> | 🟦 | `#0000FF` | Biru penuh              |
+> | ⬛ | `#000000` | Hitam                   |
+> | ⬜ | `#FFFFFF` | Putih                   |
+> | ◼️ | `#808080` | Abu-abu                 |
+> | 🟨 | `#FFFF00` | Kuning                  |
+> | 🟧 | `#FFA500` | Oranye                  |
+> | 🟪 | `#800080` | Ungu                    |
+> | 🟦 | `#00FFFF` | Cyan / Aqua             |
+> | 🌸 | `#FFC0CB` | Pink                    |
+> | 🟫 | `#A52A2A` | Cokelat                 |
+> | 🟩 | `#008000` | Hijau tua               |
+> | 🌐 | `#ADD8E6` | Biru muda (*Sky Blue*)  |
+> | 💚 | `#32CD32` | Lime hijau terang       |
+> | ⭐ | `#FFD700` | Emas (*Gold*)           |
+> | ⚪ | `#C0C0C0` | Perak (*Silver*)        |
+> | 🤍 | `#F5F5DC` | Beige                   |
+> | 🍣 | `#FA8072` | Salmon                  |
+> | 🌑 | `#2F4F4F` | Abu tua (*Dark Slate Gray*) |
 
 
 ---
