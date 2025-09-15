@@ -1,3 +1,33 @@
+# Instruksi Penggunaan
+
+## 1. Buka Notepad atau Notepad++
+- **Notepad (bawaan Windows):** cukup cari di *Start Menu*.  
+- **Notepad++ (jika terinstal):** gunakan ini karena lebih nyaman, mendukung pewarnaan sintaks.  Dapat didownload di: `https://notepad-plus-plus.org/downloads/` 
+
+
+## 2. Tulis Kode HTML dari Tutorial
+- Ketik ulang atau salin kode HTML dari materi tutorial.  
+- Misalnya: struktur dasar HTML, elemen teks, button, CSS, atau JavaScript sederhana.  
+
+
+## 3. Simpan File dengan Ekstensi `.html`
+- Klik **File → Save As...**  
+- Pilih folder kerja, misalnya `D:\BelajarHTML`  
+- Pada **Save as type**, pilih **All Files**  
+- Beri nama file, misalnya `index.html` (bukan `index.html.txt`).  
+
+
+## 4. Buka File dengan Browser
+- Cari file `index.html` di folder kerja.  
+- Klik kanan → **Open With** → pilih **Google Chrome** (atau Edge/Firefox).  
+- Setiap kali Anda mengubah kode:  
+  - Simpan kembali file (**Ctrl+S**)  
+  - **Refresh browser** `Tekan F5` untuk melihat hasil perubahan.
+
+ 
+---
+
+
 # Materi HTML Dasar
 
 ## 1. Apa itu HTML?
@@ -370,12 +400,12 @@ JavaScript memungkinkan halaman menjadi interaktif.
 ---
 
 
-> **Tugas Latihan:**  
+> **Tugas Latihan 2:**  
 > Buat halaman `html_lanjutan.html` yang berisi:  
 > - Minimal 2 tombol dengan gaya berbeda  
-> - Efek teks (bold, italic, underline, mark, del)  
-> - Formulir sederhana (input text, password, checkbox, submit)  
-> - Multimedia (gambar + video)  
+> - Efek teks (bold, italic, underline, mark, del)  dengan konten mengenai perlunya perlindungan bawah air raja ampat.
+> - Formulir sederhana dengan fitur (input text nama-NIM, checkbox gender, tombol submit)  
+> - Multimedia (gambar + video)  pendukung artikel
 > - JavaScript sederhana untuk mengubah background dan teks tombol (bisa menggunakan format warna Hexa) seperti:
 
 - `#FF0000` = Merah penuh  
@@ -392,7 +422,7 @@ JavaScript memungkinkan halaman menjadi interaktif.
 - `#A52A2A` = Cokelat  
 - `#008000` = Hijau tua  
 - `#ADD8E6` = Biru muda (*Sky Blue*)  
-- `#32CD32` = Lime hijau terang  
+- `#32CD32` = Lime hijau terang
 - `#FFD700` = Emas (*Gold*)  
 - `#C0C0C0` = Perak (*Silver*)  
 - `#F5F5DC` = Beige  
@@ -401,3 +431,6 @@ JavaScript memungkinkan halaman menjadi interaktif.
 
 
 ---
+
+
+Selamat mengerjakan :)
