@@ -168,3 +168,236 @@ Berikut contoh penggabungan semua elemen dasar dalam satu halaman HTML:
 
 ---
 
+
+# Materi HTML Lanjutan
+
+## 1. Pendahuluan
+Setelah memahami dasar HTML, tahap berikutnya adalah mempelajari elemen lanjutan yang sering digunakan dalam pembuatan website modern.  
+Materi ini akan mencakup **elemen teks, tombol, formulir, multimedia, layout, background, dan interaktivitas** menggunakan CSS serta JavaScript sederhana.  
+
+---
+
+## 2. Elemen Teks Lanjutan
+Selain `<p>` dan `<h1>` sampai `<h6>`, HTML memiliki beberapa elemen untuk memformat teks:
+
+```html
+<p><b>Teks Tebal</b></p>
+<p><strong>Teks Penting</strong></p>
+<p><i>Teks Miring</i></p>
+<p><em>Teks Ditekankan</em></p>
+<p><u>Teks Bergaris Bawah</u></p>
+<p><mark>Teks dengan Highlight</mark></p>
+<p><small>Teks Kecil</small></p>
+<p><del>Teks Dicoret</del></p>
+<p><ins>Teks Disisipkan</ins></p>
+<marquee>Contoh teks berjalan</marquee>
+```
+
+---
+
+## 3. Tombol (Button)
+Tombol digunakan untuk interaksi pengguna.  
+Jenis tombol:
+- Tombol biasa: `<button>`
+- Tombol kirim form: `<input type="submit">`
+- Tombol reset: `<input type="reset">`
+
+```html
+<button>Klik Saya</button>
+<input type="submit" value="Kirim">
+<input type="reset" value="Reset">
+```
+
+### Mengubah Warna Tombol (CSS)
+```html
+<button style="background-color: blue; color: white; padding: 10px;">Tombol Biru</button>
+<button style="background-color: green; color: white; padding: 10px;">Tombol Hijau</button>
+```
+
+---
+
+## 4. Formulir (Form)
+Digunakan untuk mengambil input dari pengguna.
+
+```html
+<form>
+    Nama: <input type="text" name="nama"><br><br>
+    Password: <input type="password" name="pass"><br><br>
+    Jenis Kelamin:
+    <input type="radio" name="gender" value="L"> Laki-laki
+    <input type="radio" name="gender" value="P"> Perempuan <br><br>
+    Hobi:
+    <input type="checkbox" name="hobi" value="Membaca"> Membaca
+    <input type="checkbox" name="hobi" value="Olahraga"> Olahraga <br><br>
+    <input type="submit" value="Kirim">
+</form>
+```
+
+---
+
+## 5. Multimedia (Gambar, Audio, Video)
+HTML mendukung elemen multimedia:
+
+```html
+<img src="https://raw.githubusercontent.com/yogidm/Binarization/refs/heads/master/Python/CitraRGB.png" alt="Contoh Gambar">
+
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung audio.
+</audio>
+
+<video width="320" height="240" controls>
+  <source src="video.mp4" type="video/mp4">
+  Browser Anda tidak mendukung video.
+</video>
+```
+
+Tambahkan file audio/video sesuai dengan filename di folder path yang sama dengan kode diatas. atau Anda juga bisa menambahkan subfolder seperti kode berikut.
+
+```html
+<video controls width="400">
+  <source src="assets/video/film.mp4" type="video/mp4">
+</video>
+```
+
+---
+
+## 6. Elemen Layout (Div, Span)
+- `<div>` digunakan untuk mengelompokkan elemen dalam blok.  
+- `<span>` digunakan untuk mengelompokkan teks secara inline.
+
+```html
+<div style="background-color: lightgray; padding: 10px;">
+    <h2>Ini dalam DIV</h2>
+    <p>Teks dalam div</p>
+</div>
+
+<p>Ini teks <span style="color: red;">dengan warna merah</span>.</p>
+```
+
+---
+
+## 7. Mengubah Background
+Menggunakan CSS untuk mengganti warna atau gambar latar belakang.
+
+```html
+<body style="background-color: lightblue;">
+    <h1>Latar Belakang Biru Muda</h1>
+</body>
+
+<body style="background-image: url('https://raw.githubusercontent.com/yogidm/Binarization/refs/heads/master/Python/SutetCat.jpg'); background-size: cover;">
+    <h1>Latar Belakang Gambar</h1>
+</body>
+```
+
+---
+
+## 8. Web Reaktif dengan JavaScript
+JavaScript memungkinkan halaman menjadi interaktif.
+
+### Mengubah Warna Tombol Saat Diklik
+```html
+<button id="btn">Klik Saya</button>
+
+<script>
+    document.getElementById("btn").onclick = function() {
+        this.style.backgroundColor = "red";
+        this.style.color = "white";
+        this.textContent = "Warna Berubah!";
+    }
+</script>
+```
+
+### Mengubah Background Halaman
+```html
+<button onclick="document.body.style.backgroundColor='lightyellow'">
+    Ubah Background
+</button>
+```
+
+---
+
+## 9. Contoh Halaman Lengkap
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Lanjutan</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .blue-btn { background-color: blue; color: white; }
+        .green-btn { background-color: green; color: white; }
+    </style>
+</head>
+<body>
+    <h1><marquee>Materi HTML Lanjutan</marquee></h1>
+
+    <p><b>Tebal</b>, <i>Miring</i>, <u>Bergaris Bawah</u>, <mark>Highlight</mark></p>
+
+    <button class="blue-btn" id="btnChange">Ubah Background</button>
+    <button class="green-btn">Tombol Hijau</button>
+
+    <form>
+        <h2>Formulir</h2>
+        Nama: <input type="text"><br><br>
+        <input type="submit" value="Kirim">
+    </form>
+
+    <h2>Multimedia</h2>
+    <img src="https://raw.githubusercontent.com/yogidm/Binarization/refs/heads/master/Python/SutetCat.jpg" alt="Contoh Gambar"><br><br>
+
+    <script>
+        document.getElementById("btnChange").onclick = function() {
+            document.body.style.backgroundColor = "lightblue";
+        }
+    </script>
+</body>
+</html>
+```
+
+---
+
+
+> **Tugas Latihan:**  
+> Buat halaman `html_lanjutan.html` yang berisi:  
+> - Minimal 2 tombol dengan gaya berbeda  
+> - Efek teks (bold, italic, underline, mark, del)  
+> - Formulir sederhana (input text, password, checkbox, submit)  
+> - Multimedia (gambar + video)  
+> - JavaScript sederhana untuk mengubah background dan teks tombol (bisa menggunakan format warna Hexa) seperti:
+
+- `#FF0000` = Merah penuh  
+- `#00FF00` = Hijau penuh  
+- `#0000FF` = Biru penuh  
+- `#000000` = Hitam  
+- `#FFFFFF` = Putih  
+- `#808080` = Abu-abu  
+- `#FFFF00` = Kuning  
+- `#FFA500` = Oranye  
+- `#800080` = Ungu  
+- `#00FFFF` = Cyan / Aqua  
+- `#FFC0CB` = Pink  
+- `#A52A2A` = Cokelat  
+- `#008000` = Hijau tua  
+- `#ADD8E6` = Biru muda (*Sky Blue*)  
+- `#32CD32` = Lime hijau terang  
+- `#FFD700` = Emas (*Gold*)  
+- `#C0C0C0` = Perak (*Silver*)  
+- `#F5F5DC` = Beige  
+- `#FA8072` = Salmon  
+- `#2F4F4F` = Abu tua (*Dark Slate Gray*)
+
+
+---
