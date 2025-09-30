@@ -460,6 +460,12 @@ echo "Hello World!";
 **Petunjuk penggunaan:**  
 Simpan kode di atas dengan nama `hello.php`, lalu jalankan melalui browser dengan mengakses `http://localhost/hello.php` setelah menyalakan server lokal (misalnya XAMPP).
 
+![Start XAMPP](https://github.com/yogidm/WebBasic/blob/main/images/XAMPP.jpg)
+
+![Direktori htdoc](https://github.com/yogidm/WebBasic/blob/main/images/lokasi_htdocs.jpg)
+
+![Start php di browser](https://github.com/yogidm/WebBasic/blob/main/images/loadLocalhost.jpg)
+
 ------------------------------------------------------------------------
 
 ## Struktur Dasar File PHP
