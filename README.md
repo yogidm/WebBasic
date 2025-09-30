@@ -457,6 +457,9 @@ echo "Hello World!";
 ?>
 ```
 
+**Petunjuk penggunaan:**  
+Simpan kode di atas dengan nama `hello.php`, lalu jalankan melalui browser dengan mengakses `http://localhost/hello.php` setelah menyalakan server lokal (misalnya XAMPP).
+
 ------------------------------------------------------------------------
 
 ## Struktur Dasar File PHP
@@ -475,6 +478,11 @@ Struktur file PHP ditandai dengan tag pembuka `<?php ... ?>`. Hal menarik dari P
 </html>
 ```
 
+
+
+**Petunjuk penggunaan:**  
+Simpan dengan nama `index.php` dan letakkan di folder `htdocs` (jika menggunakan XAMPP). Akses melalui browser untuk melihat hasil kombinasi HTML dan PHP.
+
 ------------------------------------------------------------------------
 
 ## Variabel dan Tipe Data
@@ -491,6 +499,10 @@ $aktif = true;        // Boolean
 echo "Nama: $nama, Umur: $umur";
 ?>
 ```
+
+**Petunjuk penggunaan:**  
+Buat file `variabel.php`, jalankan di browser, dan amati bagaimana data dari berbagai tipe ditampilkan.
+
 
 ------------------------------------------------------------------------
 
@@ -511,6 +523,9 @@ echo $a > $b; // true
 ?>
 ```
 
+**Petunjuk penggunaan:**  
+Jalankan file `operator.php` untuk menguji berbagai operator. Ubah nilai variabel `$a` dan `$b` untuk mencoba hasil lain.
+
 ------------------------------------------------------------------------
 
 ## Percabangan
@@ -529,6 +544,9 @@ if ($nilai >= 80) {
 }
 ?>
 ```
+
+**Petunjuk penggunaan:**  
+Simpan file `ifelse.php`, lalu ubah nilai variabel `$nilai` untuk melihat hasil yang berbeda.
 
 ------------------------------------------------------------------------
 
@@ -551,6 +569,9 @@ while ($x <= 3) {
 ?>
 ```
 
+**Petunjuk penggunaan:**  
+Simpan file `loop.php` dan jalankan. Perhatikan bagaimana perulangan menghasilkan output berulang sesuai kondisi.
+
 ------------------------------------------------------------------------
 
 ## Array
@@ -568,6 +589,9 @@ echo $siswa["nama"];
 ?>
 ```
 
+**Petunjuk penggunaan:**  
+Simpan file `array.php` lalu jalankan. Coba tambahkan elemen baru ke dalam array untuk melihat perbedaannya.
+
 ------------------------------------------------------------------------
 
 ## Fungsi
@@ -582,6 +606,9 @@ function sapa($nama) {
 echo sapa("Siti");
 ?>
 ```
+
+**Petunjuk penggunaan:**  
+Simpan file `fungsi.php` dan jalankan. Ubah parameter nama pada fungsi untuk mencoba output lain.
 
 ------------------------------------------------------------------------
 
@@ -606,6 +633,10 @@ $nama = $_POST['nama'];
 echo "Halo, " . htmlspecialchars($nama);
 ?>
 ```
+
+**Petunjuk penggunaan:**  
+Simpan dua file, `form.html` dan `proses.php`, dalam folder yang sama. Buka `form.html` di browser, isi data, lalu klik Kirim.
+
 
 ------------------------------------------------------------------------
 
@@ -633,10 +664,64 @@ echo "Data tersimpan";
 ?>
 ```
 
+**Petunjuk penggunaan:**  
+Buat database `demo_db` dan tabel `users` dengan kolom `nama` dan `email`. Simpan file `db.php` dan `insert.php`, lalu jalankan `insert.php` di browser untuk menambahkan data ke database.
+
+
 ------------------------------------------------------------------------
 
-## Penutup
+# Tugas
 
-Semua contoh dapat dicopy-paste dan langsung dijalankan di server lokal
-(XAMPP/LAMP).
+## Aplikasi Profil Mahasiswa Interaktif dengan PHP dan MySQL
+
+## Deskripsi
+Buatlah sebuah aplikasi web sederhana berbasis PHP yang menampilkan profil mahasiswa lengkap serta memungkinkan input data tambahan melalui form dan penyimpanan ke database. Aplikasi ini bersifat personal (unik untuk setiap mahasiswa) dengan menampilkan identitas asli (nama, NIM, foto).
+
+## Tujuan Pembelajaran
+Mahasiswa mampu memahami dan mengimplementasikan konsep dasar PHP meliputi:
+- Variabel dan operator  
+- Percabangan dan perulangan  
+- Array dan fungsi  
+- Form input dan pemrosesan data  
+- Koneksi PHP ke database MySQL  
+
+## Spesifikasi Teknis
+
+### Halaman Utama (`index.php`)
+- Menampilkan nama, NIM, foto pribadi (foto disimpan dengan nama sesuai NIM).  
+- Menggunakan variabel untuk menyimpan data pribadi (nama, tahun lahir, NIM).  
+- Hitung umur mahasiswa secara otomatis dengan operator aritmetika.  
+- Gunakan percabangan untuk menampilkan kategori usia:  
+  -  Kurang dari 20 = *Remaja*  
+  - 20 sampai 25    = *Dewasa Muda*  
+  -   Lebih dari 25 = *Dewasa*
+- Buat fungsi `sapaMahasiswa($nama, $nim)` yang mengembalikan kalimat sambutan.  
+
+### Perulangan
+- Gunakan `for` untuk mencetak angka 1–10.  
+- Gunakan `while` untuk mencetak huruf A–J.  
+
+### Array
+- Buat array berisi minimal 5 mata kuliah favorit.  
+- Tampilkan seluruh isi array menggunakan perulangan.  
+
+### Form Input
+- Buat form (`form.html`) untuk menerima input: nama teman, hobi, dan kota asal.  
+- Proses data dengan `proses.php` dan tampilkan hasilnya dalam format naratif:  
+  > "Halo [nama teman], hobi kamu adalah [hobi] dan kamu berasal dari [kota asal]."  
+
+### Koneksi Database (MySQL)
+- Buat database `praktikum_php` dengan tabel `mahasiswa` (kolom: `id`, `nama`, `nim`, `foto`, `motto`).  
+- Buat `insert.php` untuk menyimpan data mahasiswa (gunakan data diri sendiri).  
+- Buat `read.php` untuk menampilkan seluruh data mahasiswa yang tersimpan.  
+
+## Ketentuan Unik
+- Data identitas (nama, NIM, foto) bisa dummy bisa asli sesuai mahasiswa.  
+- Foto harus diberi nama sesuai NIM, misalnya `220101001.jpg`.  
+- Kolom *motto* diisi dengan kalimat motivasi pribadi.  
+- Setiap mahasiswa menghasilkan aplikasi dengan ciri khas unik sesuai identitas masing-masing.  
+
+--------------------------------------
+
+
 
