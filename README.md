@@ -436,3 +436,207 @@ JavaScript memungkinkan halaman menjadi interaktif.
 
 
 Selamat mengerjakan :)
+
+------------------------------------------------------------------------
+
+# Panduan Dasar PHP
+
+------------------------------------------------------------------------
+
+## Pengenalan PHP
+
+**Apa itu PHP?**\
+PHP merupakan bahasa pemrograman server-side yang digunakan secara luas untuk membangun aplikasi web dinamis. Bahasa ini populer karena mudah dipelajari, didukung oleh hampir semua layanan hosting, serta memiliki integrasi yang baik dengan sistem basis data seperti MySQL. Untuk memulai, cukup menuliskan perintah sederhana seperti `echo "Hello World!";` yang akan menampilkan teks ke layar. Dengan contoh singkat ini, pembaca dapat merasakan bagaimana PHP bekerja secara langsung.
+
+
+**Hello World sederhana**
+
+``` php
+<?php
+echo "Hello World!";
+?>
+```
+
+------------------------------------------------------------------------
+
+## Struktur Dasar File PHP
+
+Struktur file PHP ditandai dengan tag pembuka `<?php ... ?>`. Hal menarik dari PHP adalah kemampuannya untuk digabungkan langsung dengan HTML. Sebagai contoh, sebuah halaman HTML dapat menyisipkan skrip PHP untuk menampilkan teks tertentu. Hal ini menunjukkan fleksibilitas PHP yang memungkinkan pengembang menambahkan logika pemrograman ke dalam halaman web tanpa memisahkan file secara kaku.
+
+``` php
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Belajar PHP</h1>
+  <?php
+    echo "Ini kode PHP di dalam HTML.";
+  ?>
+</body>
+</html>
+```
+
+------------------------------------------------------------------------
+
+## Variabel dan Tipe Data
+
+Untuk mengelola data, PHP menyediakan variabel yang selalu diawali dengan tanda `$`. Tidak perlu mendeklarasikan tipe data secara eksplisit karena PHP akan menyesuaikan dengan nilai yang diberikan. Misalnya `$nama = "Andi";` menyimpan teks, `$umur = 20;` menyimpan bilangan bulat, dan `$aktif = true;` menyimpan nilai logika. Data yang tersimpan dapat ditampilkan kembali atau diolah sesuai kebutuhan, menjadikan PHP cukup sederhana untuk pemula namun tetap fleksibel.
+
+``` php
+<?php
+$nama = "Andi";       // String
+$umur = 20;           // Integer
+$tinggi = 1.75;       // Float
+$aktif = true;        // Boolean
+
+echo "Nama: $nama, Umur: $umur";
+?>
+```
+
+------------------------------------------------------------------------
+
+## Operator
+Kemampuan mengolah data semakin kuat dengan adanya operator. Operator aritmetika memungkinkan penjumlahan atau pengurangan nilai, operator perbandingan digunakan untuk mengevaluasi hubungan antarvariabel, sementara operator logika membantu menggabungkan berbagai kondisi. Dengan kombinasi ini, PHP mampu menangani perhitungan maupun evaluasi logika secara efisien.
+
+-   Aritmetika: `+`, `-`, `*`, `/`, `%`\
+-   Perbandingan: `==`, `!=`, `<`, `>`\
+-   Logika: `&&`, `||`, `!`
+
+``` php
+<?php
+$a = 10;
+$b = 3;
+
+echo $a + $b; // 13
+echo $a > $b; // true
+?>
+```
+
+------------------------------------------------------------------------
+
+## Percabangan
+Keputusan dalam program dapat dikendalikan melalui percabangan `if`, `elseif`, dan `else`. Contohnya, sebuah nilai ujian dapat dinilai dengan kondisi tertentu: jika nilai lebih dari 80 maka hasilnya A, jika di atas 70 maka B, selain itu C. Logika semacam ini membuat aplikasi menjadi dinamis, karena dapat beradaptasi dengan berbagai kemungkinan input.
+
+``` php
+<?php
+$nilai = 75;
+
+if ($nilai >= 80) {
+    echo "A";
+} elseif ($nilai >= 70) {
+    echo "B";
+} else {
+    echo "C";
+}
+?>
+```
+
+------------------------------------------------------------------------
+
+## Perulangan
+Selain percabangan, program juga sering membutuhkan pengulangan. PHP menyediakan perulangan seperti `for` untuk mengulang berdasarkan jumlah langkah tertentu dan `while` untuk mengulang selama kondisi masih terpenuhi. Dengan teknik ini, kode yang sama tidak perlu dituliskan berulang, sehingga program menjadi lebih ringkas dan efisien.
+
+``` php
+<?php
+// for
+for ($i = 1; $i <= 5; $i++) {
+    echo "Nomor: $i <br>";
+}
+
+// while
+$x = 1;
+while ($x <= 3) {
+    echo "Ulang ke-$x <br>";
+    $x++;
+}
+?>
+```
+
+------------------------------------------------------------------------
+
+## Array
+
+Untuk menyimpan banyak data sekaligus, PHP menggunakan array. Array indeks digunakan untuk menyimpan daftar nilai yang dapat diakses berdasarkan nomor urut, seperti daftar buah. Ada juga array asosiatif yang menggunakan kunci berupa string, misalnya menyimpan informasi siswa dengan pasangan “nama” dan “umur”. Struktur data ini memudahkan pengorganisasian dan pengaksesan data yang lebih kompleks.
+
+``` php
+<?php
+$buah = ["Apel", "Jeruk", "Mangga"];
+echo $buah[1]; // Jeruk
+
+// Array asosiatif
+$siswa = ["nama" => "Budi", "umur" => 18];
+echo $siswa["nama"];
+?>
+```
+
+------------------------------------------------------------------------
+
+## Fungsi
+Agar kode lebih terstruktur, PHP mendukung pembuatan fungsi. Fungsi adalah sekumpulan perintah yang didefinisikan sekali lalu bisa digunakan berkali-kali. Sebagai contoh, fungsi `sapa($nama)` bisa dipanggil untuk menyapa siapa pun tanpa perlu menuliskan ulang logika yang sama. Pendekatan modular seperti ini membuat kode lebih mudah dibaca dan dipelihara.
+
+``` php
+<?php
+function sapa($nama) {
+    return "Halo, $nama!";
+}
+
+echo sapa("Siti");
+?>
+```
+
+------------------------------------------------------------------------
+
+## Form dan Input
+
+Interaktivitas web semakin terasa ketika PHP dipadukan dengan formulir HTML. Sebuah form dapat mengirimkan data ke file PHP untuk diproses. Misalnya, pengguna mengisi nama pada form, lalu PHP menerima input tersebut melalui `$_POST` dan menampilkannya kembali ke layar. Agar lebih aman, data input dapat difilter dengan fungsi seperti `htmlspecialchars` untuk mencegah penyalahgunaan.
+
+**form.html**
+
+``` html
+<form action="proses.php" method="post">
+  Nama: <input type="text" name="nama">
+  <button type="submit">Kirim</button>
+</form>
+```
+
+**proses.php**
+
+``` php
+<?php
+$nama = $_POST['nama'];
+echo "Halo, " . htmlspecialchars($nama);
+?>
+```
+
+------------------------------------------------------------------------
+
+## Koneksi Database (MySQL)
+
+Tahap berikutnya adalah menghubungkan PHP dengan basis data. Dengan bantuan PDO, PHP dapat membuka koneksi ke MySQL dan mengeksekusi perintah SQL, misalnya menyimpan data pengguna baru ke tabel. Proses ini memungkinkan data tidak hanya ditampilkan sementara di layar, tetapi juga disimpan secara permanen dalam sistem basis data, yang menjadi dasar bagi aplikasi web berskala besar dan modern.
+
+**db.php**
+
+``` php
+<?php
+$pdo = new PDO("mysql:host=localhost;dbname=demo_db", "root", "");
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+```
+
+**insert.php**
+
+``` php
+<?php
+require 'db.php';
+$stmt = $pdo->prepare("INSERT INTO users (nama,email) VALUES (?, ?)");
+$stmt->execute(["Andi", "andi@mail.com"]);
+echo "Data tersimpan";
+?>
+```
+
+------------------------------------------------------------------------
+
+## Penutup
+
+Semua contoh dapat dicopy-paste dan langsung dijalankan di server lokal
+(XAMPP/LAMP).
+
